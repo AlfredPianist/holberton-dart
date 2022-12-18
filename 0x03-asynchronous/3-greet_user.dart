@@ -14,9 +14,8 @@ Future<String> greetUser() async {
 Future<String> loginUser() async {
   bool user_exists = await checkCredentials();
   print ("There is a user: ${user_exists}");
-  if (user_exists) {
+  if (user_exists)
     return greetUser();
-  }
   return "Wrong credentials";
 }
 
